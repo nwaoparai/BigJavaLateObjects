@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+//Write a program that displays the dimensions of a letter-size (8.5 × 11 inches) sheet
+//of paper in millimeters. There are 25.4 millimeters per inch. Use constants
+//and comments
+//in your program
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner in = new Scanner(System.in);
+		final double MM_PER_INCH = 25.4;
+		System.out.print("Enter the width: ");
+		double width = in.nextDouble();
+		System.out.print("Enter the length: ");
+		double length = in.nextDouble();
+		System.out.print("The width in millimeters is ");
+		System.out.printf("%.2f", width*MM_PER_INCH);
+		System.out.print(" and the length is ");
+		System.out.printf("%.2f", length*MM_PER_INCH);
+	}
+
+}
