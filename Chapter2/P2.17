@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+//Write a program that reads two times in military format (0900, 1730) and prints the
+//number of hours and minutes between the two times. Here is a sample run. User
+//input is in color.
+//Please enter the first time: 0900
+//Please enter the second time: 1730
+//8 hours 30 minutes
+//Extra credit if you can deal with the case where the first time is later than the second:
+//Please enter the first time: 1730
+//Please enter the second time: 0900
+//15 hours 30 minutes
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter the first time: ");
+		int firstTime = in.nextInt();
+		int minutes1 = ((firstTime/100)* 60) + (firstTime%100);
+		
+		System.out.println(minutes1);
+		System.out.print("Enter the second time: ");
+		int secondTime = in.nextInt();
+		int minutes2 = ((secondTime/100)* 60) + (secondTime%100);
+		System.out.println(minutes2);
+		
+		System.out.print(((minutes2-minutes1)/60) + " hours " + ((minutes2-minutes1)%60) + " minutes");
+	}
+
+}
