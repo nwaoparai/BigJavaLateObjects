@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+//Write a program that reads a number between 1,000 and 999,999 from the user and
+//prints it with a comma separating the thousands. Here is a sample dialog; the user
+//input is in color:
+//Please enter an integer between 1000 and 999999: 23456
+//23,456
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter a number between 1,000 and 999,999: ");
+		int number = in.nextInt();
+		int number1 = number/1000;
+		int mod1 = (number%1000)/100;
+		int mod2 = ((number%1000)%100)/10;
+		int mod3 = ((number%1000)%100)%10;
+		
+		System.out.println(number1 + "," + mod1 + "" + mod2 + "" + mod3);
+	}
+
+}
